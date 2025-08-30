@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+body{
+    background-color: #e8e6e6;
+}
+
+/* Estilo base para los elementos del menú */
+.menu-item {
+    background-color: #4298d1;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Cambio de color al señalar con el cursor */
+.menu-item:hover {
+    background-color: #9f13bb;
+}
+
+.boton-comprar {
+    background-color: #3ca4e9;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-right: 10px;
+    border-radius: 5px;
+}
+
+/* Cambio de color al señalar con el cursor */
+.boton-comprar:hover {
+    background-color: #d52fe4;
+}
+
+.container__background-circle{
+    max-width: 1200px;
+    height: 600px; 
+    margin: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.circle{
+    width: 300px;
+    height: 300px;
+    -moz-border-radius: 50%;
+     -webkit-border-radius: 50%;
+     border-radius: 50%;
+    background: red;
+    position: absolute;
+}
+
+.rectangle{
+    width: 300px;
+    height: 300px;
+    background: red;
+    position: absolute;
+}
+
+
+.circle1{
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(to left, #0ea1e6, #8e1c92);
+    right: 100px;
+    top: 100px;
+    animation: t1 8s ease infinite;
+}
+
+.circle2{
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(to left, #40b8ae, #d64fc4);
+    top: 350px;
+    animation: t2 9s ease infinite;
+}
+
+.rectangle3{
+    width: 250px;
+    height: 250px;
+    background: linear-gradient(to left, #4a9ec5, #f158d0);
+    left: 300px;
+    animation: t3 7s ease infinite;
+}
+
+.rectangle4{
+    width: 180px;
+    height: 180px;
+    background: linear-gradient(to left, #a369da, #4b3f81);
+    right: 400px;
+    top: 400px;
+    animation: t4 5s ease infinite;
+}
+
+@keyframes t1 {
+    0%{
+        transform: rotate(70deg) translateY(0px);
+    }
+    50%{
+        transform: rotate(70deg) translateY(100px);
+    }
+    100%{
+        transform: rotate(70deg) translateY(0px);
+    }
+}
+
+@keyframes t2 {
+    0%{
+        transform: rotate(10deg) translateY(0px);
+    }
+    50%{
+        transform: rotate(150deg) translateY(100px);
+    }
+    100%{
+        transform: rotate(10deg) translateY(0px);
+    }
+}
+
+@keyframes t3 {
+    0%{
+        transform: rotate(150deg) translateY(0px);
+    }
+    50%{
+        transform: rotate(70deg) translateY(20px);
+    }
+    100%{
+        transform: rotate(150deg) translateY(0px);
+    }
+}
+
+@keyframes t4 {
+    0%{
+        transform: rotate(100deg) translateY(0px);
+    }
+    50%{
+        transform: rotate(70deg) translateX(100px);
+    }
+    100%{
+        transform: rotate(100deg) translateY(0px);
+    }
+}
+
+/* Estilos del carrusel */
+@keyframes desplazar-izquierda {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-600px); /* Ancho total de las tarjetas */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes desplazar-derecha {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(600px); /* Ancho total de las tarjetas */
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.card {
+    width: 350px;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.1);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    transition: all 300ms;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.card:hover .cover__card img {
+    transform: scale(1.2);
+}
+
+.cover__card, .cover__card1 {
+    width: 100%;
+    height: 320px;
+    border-radius: 14px;
+    overflow: hidden;
+}
+
+.cover__card1 {
+    height: 220px;
+}
+
+.cover__card img {
+    width: 100%;
+    transition: all 300ms;
+}
+
+.card h2 {
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.card p {
+    margin-top: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.5px;
+}
+
+.card hr {
+    margin-top: 30px;
+    border: none;
+    height: 0.2px;
+    background: #41414138;
+}
+
+.footer__card {
+    margin-top: 10px;
+    display: flex;
+    color: rgb(0, 0, 0);
+    justify-content: space-between;
+}
+
+
+.container__cards {
+    width: 1800px; /* Ancho de cada tarjeta */
+    margin: auto;
+    overflow: hidden; /* Ocultar el contenido que se desplaza fuera del contenedor */
+}
+
+.cardswrapper {
+    display:flex;
+    animation: desplazar-izquierda 10s linear infinite, desplazar-derecha 10s linear infinite;
+}
+
+.cardswrapper2{
+    display: flex;
+}
+
+/* Estilo del cursor */
+.carousel-container:hover {
+    cursor: grab;
+}
+
+.grabbing {
+    cursor: grabbing;
+}
+
+/* Estilos base para los botones */
+.social-buttons {
+    position: fixed;
+    bottom: 100px;
+    right: 20px;
+    z-index: 999;
+}
+
+.logo {
+    position: fixed;
+    top: 0;
+    right: 20px;
+    margin: 00px;
+    z-index: 999;
+}
+
+.social-buttons a {
+    display: block;
+    margin-bottom: 10px;
+    padding: 10px 13px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para el botón */
+#imagenButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+/* Estilos para el botón de Facebook */
+.facebook-button {
+    background-color: #1877f2; /* Color de Facebook */
+}
+
+.facebook-button:hover {
+    background-color: #155dce; /* Color de Facebook al pasar el cursor */
+}
+
+/* Estilos para el botón de Twitter */
+.twitter-button {
+    background-color: #1da1f2; /* Color de Twitter */
+}
+
+.twitter-button:hover {
+    background-color: #1691e0; /* Color de Twitter al pasar el cursor */
+}
+
+/* Estilos para el botón de Instagram */
+.instagram-button {
+    background-color: #c32aa3; /* Color de Instagram */
+}
+
+.tiktok-button {
+    background-color: #5e3f56; /* Color de Instagram */
+}
+
+.instagram-button:hover {
+    background-color: #a6268e; /* Color de Instagram al pasar el cursor */
+}
+
+.tiktok-button:hover {
+    background-color: #3c2c63; /* Color de Instagram al pasar el cursor */
+}
+
+/* Estilos para el botón de LinkedIn */
+.linkedin-button {
+    background-color: #2867b2; /* Color de LinkedIn */
+}
+
+.linkedin-button:hover {
+    background-color: #215d9f; /* Color de LinkedIn al pasar el cursor */
+}
+
+/* Estilos para el contenedor del botón de WhatsApp */
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+}
+
+/* Estilos para el botón de WhatsApp */
+.whatsapp-button a {
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: #25d366; /* Color de WhatsApp */
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+/* Estilos para la imagen del icono de WhatsApp */
+.whatsapp-button img {
+    width: 40px;
+    height: 40px;
+    margin-top: 10px; /* Alineación vertical */
+}
+
+/* Cambio de color al pasar el cursor sobre el botón de WhatsApp */
+.whatsapp-button a:hover {
+    background-color: #128c7e; /* Nuevo color al pasar el cursor */
+}
+
+@media screen and (max-width:1200px) {
+    .container__cards{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        margin-top: 100px;
+        padding-bottom: 100px;
+    }
+}
